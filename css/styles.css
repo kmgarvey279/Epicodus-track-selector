@@ -1,8 +1,10 @@
-.radio {
-    border: 2px solid blue;
-    background-color: lightblue;
+body {
+  background-color: #b3d1ff;
 }
 
-.body {
-  background-color: aqua;
+.radio {
+    border: 2px solid blue;
+    margin: 8px;
+    padding: 8px;
+    background-color: #0047b3;
 }
