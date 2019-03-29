@@ -1,63 +1,65 @@
 $().ready(function() {
   $("#trackQuestions").submit(function() {
     event.preventDefault();
+    var result;
+    var answer1 = $('input:radio[name="question1"]:checked').val()
+    var answer2 = $('input:radio[name="question2"]:checked').val()
+    var answer3 = $('input:radio[name="question3"]:checked').val()
+    var answer4 = $('input:radio[name="question4"]:checked').val()
+    var answer5 = $('input:radio[name="question5"]:checked').val()
     var csharp = 0;
     var java = 0;
-    var php = 0;
     var ruby = 0;
-    var result;
-    if ($('input:radio[name="question1"]:checked').val() === "A") {
+    var php = 0;
+
+    if (answer2 === "A") {
+      ++java;
+      ++csharp;
+    } else if (answer2 === "B") {
+      ++php;
+    } else if (answer2 === "C") {
+      ++ruby;
+    }
+
+    if (answer3 === "A") {
+      ++csharp;
+    } else if (answer3 === "B") {
+      ++java;
+    } else if (answer3 === "C") {
+      ++php;
+    } else if (answer3 === "D") {
+      ++ruby;
+    }
+
+    if (answer4 === "A") {
+      ++ruby;
+    } else if (answer4 === "B") {
+      ++php;
+    } else if (answer4 === "C") {
+      ++csharp;
+      ++java;
+    }
+
+    if (answer4 === "A") {
+      ++java;
+    } else if (answer4 === "B") {
+      ++php;
+      ++csharp;
+    } else if (answer4 === "C") {
+      ++ruby;
+    }
+
+    if (answer1 === "A") {
       result = "CSS and Design";
+    } else if (csharp > ruby && csharp > java && csharp > php) {
+      result = "C# and .NET";
+    } else if (ruby > java && ruby > php) {
+      result = "Ruby and Rails";
+    } else if (java > php) {
+      result = "Java and Android"
     } else {
-      if ($('input:radio[name="question2"]:checked').val() === "A") {
-        ++csharp;
-        ++java;
-      } else if ($('input:radio[name="question2"]:radio').val() === "B") {
-        ++php;
-      } else if ($('input:radio[type="question2"]:radio').val() === "C") {
-        ++ruby;
-      }
-
-      if ($('input:radio[type="question3"]:radio').val() === "A") {
-        ++csharp;
-      } else if ($('input:radio[type="question3"]:radio').val() === "B") {
-        ++java;
-      } else if ($('input:radio[type="question3"]:radio').val() === "C") {
-        ++php;
-      } else if ($('input:radio[type="question3"]:radio').val() === "D") {
-        ++ruby;
-      }
-
-      if ($('input:radio[type="question4"]:radio').val() === "A") {
-        ++ruby;
-      } else if ($('input:radio[type="question4"]:radio').val() === "B") {
-        ++php;
-      } else if ($('input:radio[type="question4"]:radio').val() === "C") {
-        ++csharp;
-        ++java;
-      } else if ($('input:radio[type="question4"]:radio').val() === "D") {
-        ++ruby;
-      }
-
-      if ($('input:radio[type="question5"]:radio').val() === "A") {
-        ++java;
-      } else if ($('input:radio[type="question5"]:radio').val() === "B") {
-        ++php;
-        ++csharp;
-      } else if ($('input:radio[type="question5"]:radio').val() === "C") {
-        ++ruby;
-      }
-      }
-      if (csharp > ruby && csharp > java && csharp > php) {
-        result = "C#";
-      } else if (ruby > java && ruby > php) {
-        result = "Ruby";
-      } else if (java > php) {
-        Result = "Java"
-      } else {
-        result = "PHP";
-      }
-  
-      $("#language").empty().append(result);
+      result = "PHP/Drupal";
+    }
+    $("#language").empty().append(result);
   });
 });
