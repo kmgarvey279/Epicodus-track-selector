@@ -11,45 +11,50 @@
     <div="container">
       <h1>What Epicodus Track Should I Choose?</h1>
       <h4>Would you rather work on the front-end or the back-end side of development? Front-end primarily focuses more on the user experence and might be a good fit for you if you enjoy creating asthetically appealing layouts, design, and visuals. Back-end focuses on the "behind-the-scenes" aspects of web pages and applications that store, organize, and maniplulate data. It may be a good fit for you if you enjoy figuring out how complex systems work and coming up with solutions to difficult problems. </h4>
-      <div class="form-group"
-        <form>
+      <div class="radio">
+        <label>
             <input type="radio" name="question1" value="front"> Front-end development sounds more like my style.<br>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
             <input type="radio" name="question1" value="back"> Back-end development is what I'm looking for.<br>
-        </form>
+        </label>
       </div>
       <h4>What kind of company would you prefer to work for?</h4>
       <div class="form-group"
         <form>
-            <input type="radio" name="question2" value="java, #c">A large, well-established company.<br>
-            <input type="radio" name="question2" value="php">I'd prefer to maximize my number of options: everything from working in small agencies to taking on huge govenment projects.<br>
-            <input type="radio" name="question2" value="ruby">I'd prefer to work for a smaller company or a startup.<br>
+            <input type="radio" name="question2" value="A">A large, well-established company.<br>
+            <input type="radio" name="question2" value="B">I'd prefer to maximize my number of options: everything from working in small agencies to taking on huge govenment projects.<br>
+            <input type="radio" name="question2" value="C">I'd prefer to work for a smaller company or a startup.<br>
         </form>
       </div>
       <h4>What sort of products would you like to work on?</h4>
       <div class="form-group"
         <form>
-            <input type="radio" name="question3" value="c#"> I would like to work on internal business software with a focus on Microsoft operating systems.<br>
-            <input type="radio" name="question3" value="java"> I would like to be able to work on Android apps and a variety of high-performance applications.<br>
-            <input type="radio" name="question3" value="php"> I'd like to be able to potentally work on a wide range of applications ranging from content mangement systems such as Wordpress to web security for large organizations to building small websites.<br>
-            <input type="radio" name="question3" value="ruby"> I'd like to work on a interactive web applications.<br>
+            <input type="radio" name="question3" value="A"> I would like to work on internal business software with a focus on Microsoft operating systems.<br>
+            <input type="radio" name="question3" value="B"> I would like to be able to work on Android apps and a variety of high-performance applications.<br>
+            <input type="radio" name="question3" value="C"> I'd like to be able to potentally work on a wide range of applications ranging from content mangement systems such as Wordpress to web security for large organizations to building small websites.<br>
+            <input type="radio" name="question3" value="D"> I'd like to work on a interactive web applications.<br>
         </form>
       </div>
       <h4>Would you like to focus on a more "beginner-friendly" language, or are you fine starting with a more difficult one?</h4>
       <div class="form-group"
         <form>
-            <input type="radio" name="question4" value="ruby"> I'd like to learn an efficient language that is known for being relatively easy to read and write.<br>
-            <input type="radio" name="question4" value="php"> I'd prefer a less verbose and more efficent language, but it doesn't need to be easy to read or write.<br>
-            <input type="radio" name="question4" value="c#, java"> I'm willing to learn a more verbose and difficult language if it has other advantages.<br>
+            <input type="radio" name="question4" value="A"> I'd like to learn an efficient language that is known for being relatively easy to read and write.<br>
+            <input type="radio" name="question4" value="B"> I'd prefer a less verbose and more efficent language, but it doesn't need to be easy to read or write.<br>
+            <input type="radio" name="question4" value="C"> I'm willing to learn a more verbose and difficult language if it has other advantages.<br>
         </form>
       </div>
       <h4>How important is the popularity of the programming language you choose?</h4>
       <div class="form-group"
         <form>
-            <input type="radio" name="question5" value="java"> I want to learn the #1 most popular language.<br>
-            <input type="radio" name="question5" value="c#, php"> I'd like to learn one of the most popular languages, but it doen't need to be #1.<br>
-            <input type="radio" name="question5" value="ruby"> I'm fine learning one of the less popular languages if it has other advantages.<br>
+            <input type="radio" name="question5" value="A"> I want to learn the #1 most popular language.<br>
+            <input type="radio" name="question5" value="B"> I'd like to learn one of the most popular languages, but it doen't need to be #1.<br>
+            <input type="radio" name="question5" value="C"> I'm fine learning one of the less popular languages if it has other advantages.<br>
         </form>
       </div>
+      <p>Your programing track is: <span id="language"></span> .</p>
     </div>
   </body>
 </html>
