@@ -1,51 +1,53 @@
 $().ready(function() {
-  $("form#trackQuestions").submit(function(event) {
+  $("#trackQuestions").submit(function() {
+    event.preventDefault();
     var csharp = 0;
     var java = 0;
     var php = 0;
     var ruby = 0;
-    if ($('input[type="question1"]:checked').val() === "A") {
-        result = "CSS and Design";
+    var result;
+    if ($('input:radio[name="question1"]:checked').val() === "A") {
+      result = "CSS and Design";
     } else {
-      if ($('input[type="question2"]:checked').val() === "A") {
+      if ($('input:radio[name="question2"]:checked').val() === "A") {
         ++csharp;
         ++java;
-      } else if ($('input[type="question2"]:checked').val() === "B") {
+      } else if ($('input:radio[name="question2"]:radio').val() === "B") {
         ++php;
-      } else if ($('input[type="question2"]:checked').val() === "C") {
+      } else if ($('input:radio[type="question2"]:radio').val() === "C") {
         ++ruby;
       }
 
-      if ($('input[type="question3"]:checked').val() === "A") {
+      if ($('input:radio[type="question3"]:radio').val() === "A") {
         ++csharp;
-      } else if ($('input[type="question3"]:checked').val() === "B") {
+      } else if ($('input:radio[type="question3"]:radio').val() === "B") {
         ++java;
-      } else if ($('input[type="question3"]:checked').val() === "C") {
+      } else if ($('input:radio[type="question3"]:radio').val() === "C") {
         ++php;
-      } else if ($('input[type="question3"]:checked').val() === "D") {
+      } else if ($('input:radio[type="question3"]:radio').val() === "D") {
         ++ruby;
       }
 
-      if ($('input[type="question4"]:checked').val() === "A") {
+      if ($('input:radio[type="question4"]:radio').val() === "A") {
         ++ruby;
-      } else if ($('input[type="question4"]:checked').val() === "B") {
+      } else if ($('input:radio[type="question4"]:radio').val() === "B") {
         ++php;
-      } else if ($('input[type="question4"]:checked').val() === "C") {
+      } else if ($('input:radio[type="question4"]:radio').val() === "C") {
         ++csharp;
         ++java;
-      } else if ($('input[type="question4"]:checked').val() === "D") {
+      } else if ($('input:radio[type="question4"]:radio').val() === "D") {
         ++ruby;
       }
 
-      if ($('input[type="question5"]:checked').val() === "A") {
+      if ($('input:radio[type="question5"]:radio').val() === "A") {
         ++java;
-      } else if ($('input[type="question5"]:checked').val() === "B") {
+      } else if ($('input:radio[type="question5"]:radio').val() === "B") {
         ++php;
         ++csharp;
-      } else if ($('input[type="question5"]:checked').val() === "C") {
+      } else if ($('input:radio[type="question5"]:radio').val() === "C") {
         ++ruby;
       }
-
+      }
       if (csharp > ruby && csharp > java && csharp > php) {
         result = "C#";
       } else if (ruby > java && ruby > php) {
@@ -55,8 +57,7 @@ $().ready(function() {
       } else {
         result = "PHP";
       }
-    }
+  
       $("#language").empty().append(result);
-      event.preventDefault();
   });
 });
