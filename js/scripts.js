@@ -1,7 +1,6 @@
 $().ready(function() {
   $("#trackQuestions").submit(function() {
     event.preventDefault();
-    var result;
     var answer1 = $('input:radio[name="question1"]:checked').val()
     var answer2 = $('input:radio[name="question2"]:checked').val()
     var answer3 = $('input:radio[name="question3"]:checked').val()
@@ -11,6 +10,7 @@ $().ready(function() {
     var java = 0;
     var ruby = 0;
     var php = 0;
+    var result;
 
     if (answer2 === "A") {
       ++java;
@@ -40,16 +40,18 @@ $().ready(function() {
       ++java;
     }
 
-    if (answer4 === "A") {
+    if (answer5 === "A") {
       ++java;
-    } else if (answer4 === "B") {
+    } else if (answer5 === "B") {
       ++php;
       ++csharp;
-    } else if (answer4 === "C") {
+    } else if (answer5 === "C") {
       ++ruby;
     }
 
-    if (answer1 === "A") {
+    if (answer1 === undefined || answer2 === undefined || answer3 === undefined || answer4 === undefined || answer5 === undefined) {
+    alert("Please complete all fields");
+    } else if (answer1 === "A") {
       result = "CSS and Design";
     } else if (csharp > ruby && csharp > java && csharp > php) {
       result = "C# and .NET";

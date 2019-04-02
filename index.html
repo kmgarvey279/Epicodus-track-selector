@@ -9,8 +9,10 @@
   </head>
   <body>
     <div class="container">
-    <form id="trackQuestions">
-      <h1>What Epicodus Track Should I Choose?</h1>
+      <img src="img/logo.png" alt="Epicodus Logo">
+      <form id="trackQuestions">
+        <h1>What Programing Track Should I Choose?</h1>
+        <p>Epicodus offers a wide range of programing languages and focuses. Concerned about decision paralysis? Keep in mind that language you learn isn't nearly importent as the meta-level skills you'll learn along the way and you'll likely go on to learn a number of additional languages over the course of your career. That being said, you've looking to narrow down your options, this quiz can help point you in the right direction.</p>
           <div class="radio">
             <h5>Would you rather work on the front-end or the back-end side of development?</h5>
             <input type="radio" name="question1" value="A"> Front-end development sounds more like my style.<br>
@@ -41,9 +43,20 @@
             <input type="radio" name="question5" value="B"> I'd like to learn one of the most popular languages, but it doen't need to be #1.<br>
             <input type="radio" name="question5" value="C"> I'm fine learning one of the less popular languages if it has other advantages.<br>
           </div>
-          <button type="submit" name="subBtn" id="subBtn btn-info">Submit</button>
-      <p>Your programing track is: <span id="language"></span>.</p>
-    </form>
-    </div>
+          <button type="submit" name="subBtn" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </form>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-10">
+                    <p>Our track suggestion for you is: <span id="language"></span>.</p>
+                  </div>
+                <div class="col-md-2">
+                  <img src="img/csslogo.jpg" class="logoImage" weight="100px" height="100px">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
   </body>
 </html>
