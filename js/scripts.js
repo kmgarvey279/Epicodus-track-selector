@@ -1,6 +1,7 @@
 $().ready(function() {
   $("#trackQuestions").submit(function() {
     event.preventDefault();
+
     var answer1 = $('input:radio[name="question1"]:checked').val()
     var answer2 = $('input:radio[name="question2"]:checked').val()
     var answer3 = $('input:radio[name="question3"]:checked').val()
@@ -53,15 +54,22 @@ $().ready(function() {
     alert("Please complete all fields");
     } else if (answer1 === "A") {
       result = "CSS and Design";
+      logo = "#cssLogo";
     } else if (csharp > ruby && csharp > java && csharp > php) {
       result = "C# and .NET";
+      logo = "#csharpLogo";
     } else if (ruby > java && ruby > php) {
       result = "Ruby and Rails";
+      logo = "#rubyLogo";
     } else if (java > php) {
       result = "Java and Android"
+      logo = "#javaLogo";
     } else {
       result = "PHP/Drupal";
+      logo = "#phpLogo";
     }
+
     $("#language").empty().append(result);
+    $(logo).show();
   });
 });

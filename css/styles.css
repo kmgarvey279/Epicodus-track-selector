@@ -3,14 +3,10 @@ body {
 }
 
 .radio {
-    border: 2px solid blue;
+    border: 2px solid #3f73aa;
     margin: 8px;
     padding: 8px;
-    background-color: #0047b3;
-}
-
-modal {
-  display: none;
+    background-color: #15a3a5;
 }
 
 .logoImage {
@@ -21,7 +17,27 @@ modal {
 
 .panel-body {
   background-color: white;
-  border: 5px solid black;
+  border: 2px solid #3f73aa;
   padding:10px;
   margin-top: 15px;
+}
+
+#cssLogo {
+  display:none;
+}
+
+#csharpLogo {
+  display:none;
+}
+
+#javaLogo {
+  display:none;
+}
+
+#phpLogo {
+  display:none;
+}
+
+#rubyLogo {
+  display:none;
 }
