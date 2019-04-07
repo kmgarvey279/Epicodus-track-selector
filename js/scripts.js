@@ -2,11 +2,11 @@ $().ready(function() {
   $("#trackQuestions").submit(function() {
     event.preventDefault();
 
-    var answer1 = $('input:radio[name="question1"]:checked').val()
-    var answer2 = $('input:radio[name="question2"]:checked').val()
-    var answer3 = $('input:radio[name="question3"]:checked').val()
-    var answer4 = $('input:radio[name="question4"]:checked').val()
-    var answer5 = $('input:radio[name="question5"]:checked').val()
+    var answer1 = $('input:radio[name="question1"]:checked').val();
+    var answer2 = $('input:radio[name="question2"]:checked').val();
+    var answer3 = $('input:radio[name="question3"]:checked').val();
+    var answer4 = $('input:radio[name="question4"]:checked').val();
+    var answer5 = $('input:radio[name="question5"]:checked').val();
     var csharp = 0;
     var java = 0;
     var ruby = 0;
@@ -62,7 +62,7 @@ $().ready(function() {
       result = "Ruby and Rails";
       $("#insertImage").empty().append('<img src="img/ruby.png" weight="100px" height="100px" />');
     } else if (java > php) {
-      result = "Java and Android"
+      result = "Java and Android";
       $("#insertImage").empty().append('<img src="img/java.jpg" weight="100px" height="100px" />');
     } else {
       result = "PHP/Drupal";
