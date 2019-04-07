@@ -20,24 +20,18 @@ body {
   border: 2px solid #3f73aa;
   padding:10px;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-#cssLogo {
-  display:none;
+.radio:hover{
+    background-color: #42eef4;
+ }
+
+button {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
-#csharpLogo {
-  display:none;
-}
-
-#javaLogo {
-  display:none;
-}
-
-#phpLogo {
-  display:none;
-}
-
-#rubyLogo {
+#results {
   display:none;
 }

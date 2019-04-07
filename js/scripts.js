@@ -54,22 +54,26 @@ $().ready(function() {
     alert("Please complete all fields");
     } else if (answer1 === "A") {
       result = "CSS and Design";
-      logo = "#cssLogo";
+      $("#insertImage").empty().append('<img src="img/csslogo.jpg" weight="100px" height="100px" />');
     } else if (csharp > ruby && csharp > java && csharp > php) {
       result = "C# and .NET";
-      logo = "#csharpLogo";
+      $("#insertImage").empty().append('<img src="img/csharplogo.png" weight="100px" height="100px" />');
     } else if (ruby > java && ruby > php) {
       result = "Ruby and Rails";
-      logo = "#rubyLogo";
+      $("#insertImage").empty().append('<img src="img/ruby.png" weight="100px" height="100px" />');
     } else if (java > php) {
       result = "Java and Android"
-      logo = "#javaLogo";
+      $("#insertImage").empty().append('<img src="img/java.jpg" weight="100px" height="100px" />');
     } else {
       result = "PHP/Drupal";
-      logo = "#phpLogo";
+      $("#insertImage").empty().append('<img src="img/php.png" weight="100px" height="100px" />');
     }
-
-    $("#language").empty().append(result);
-    $(logo).show();
+    $("#results").show();
+    $("#language").append().text(result);
   });
+
+  $("button#reBtn").click(function() {
+    $("#results").hide();
+    $("#language").empty();
+  })
 });
