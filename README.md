@@ -2,7 +2,7 @@
 
 #### _This page takes input from the user and recommends one of five different Epicodus tracks based on their answers, 03.29.2019_
 
-#### By _**Kevin Garvey** _
+#### By _**Kevin Garvey**_
 
 ## Description
 
