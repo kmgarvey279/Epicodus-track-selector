@@ -6,7 +6,7 @@
 
 ## Description
 
-_This pages askes the user five different questions to learn about what they are looking for in a programing language and a career. Based on this input, the page will recommend one of five tracks: CSS and Design, Java, Ruby, C#, and PPH by displaying the track on the bottom of the page. _
+_This pages askes the user five different questions to learn about what they are looking for in a programing language and a career. Based on this input, the page will recommend one of five tracks: CSS and Design, Java, Ruby, C#, and PPH by displaying the track on the bottom of the page._
 
 ## Setup/Installation Requirements
 
